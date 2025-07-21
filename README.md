@@ -2,6 +2,34 @@
 
 This repository contains the official implementation of **SCANFormer**, a hybrid CNN-Transformer model designed for accurate and efficient medical image segmentation.
 
+
+## Datasets
+SCANFormer is evaluated on the following publicly available medical imaging datasets:
+
+[ACDC](https://www.creatis.insa-lyon.fr/Challenge/acdc/)
+
+[Synapse](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
+
+[LCTSC](https://www.cancerimagingarchive.net/collection/lctsc/)
+
+
+Before running the training or testing scripts, ensure that the datasets (ACDC, Synapse, LCTSC) are downloaded and organized in the following structure (you can adjust this in the code if needed):
+```
+datasets/
+├── ACDC/
+│ ├── images/
+│ └── labels/
+├── Synapse/
+│ ├── images/
+│ └── labels/
+└── LCTSC/
+├── images/
+└── labels/
+
+</details>
+```
+
+
 ## Environment Setup
 
 To replicate our experiments, please use:
@@ -14,12 +42,6 @@ Install all required dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
-
-## Datasets
-SCANFormer is evaluated on the following publicly available medical imaging datasets:
-[ACDC](https://www.creatis.insa-lyon.fr/Challenge/acdc/)
-[Synapse](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
-[LCTSC](https://www.cancerimagingarchive.net/collection/lctsc/)
 
 ## Train/Test Instructions
 Before training, please configure the dataset path in train.py. You can adjust other parameters such as batch_size, epochs, etc., as needed.
