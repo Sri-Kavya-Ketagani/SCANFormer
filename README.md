@@ -15,6 +15,11 @@ Install all required dependencies using:
 pip install -r requirements.txt
 ```
 
+## Datasets
+SCANFormer is evaluated on the following publicly available medical imaging datasets:
+[ACDC](https://www.creatis.insa-lyon.fr/Challenge/acdc/)
+[Synapse](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
+[LCTSC](https://www.cancerimagingarchive.net/collection/lctsc/)
 
 ## Train/Test Instructions
 Before training, please configure the dataset path in train.py. You can adjust other parameters such as batch_size, epochs, etc., as needed.
