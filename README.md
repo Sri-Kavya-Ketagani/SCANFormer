@@ -1,16 +1,17 @@
 # SCANFormer: Scale and Context-Aware Nested Feature Fusion Transformer for Medical Image Segmentation
 
-This repository contains the official implementation of **SCANFormer**, a hybrid CNN-Transformer model designed for accurate and efficient medical image segmentation.
+This repository contains the official implementation of **SCANFormer**, a hybrid CNN-Transformer model designed for accurate and efficient medical image segmentation. SCANFormer is a novel and generalized medical image segmentation framework with a comprehensive
+multi-scale feature extraction and fusion approach to enable more diverse feature learning. Extensive experiments on datasets of CT and MRI modalities demonstrate the superiority of SCANFormer, achieving 3%, 8.48%, and 11.6% higher Dice scores than TransUNet on the ACDC, Synapse, and LCTSC datasets, respectively even when trained from scratch without relying on pre-trained models.
 
 
 ## Datasets
 SCANFormer is evaluated on the following publicly available medical imaging datasets:
 
-[ACDC](https://www.creatis.insa-lyon.fr/Challenge/acdc/)
+ACDC - Automated Cardiac Diagnosis Challenge consists of 100 MRI cases for segmentation of cardiac structures. The dataset can be downloaded from https://www.creatis.insa-lyon.fr/Challenge/acdc/
 
-[Synapse](https://www.synapse.org/#!Synapse:syn3193805/wiki/217789)
+Synapse -  Multi-Atlas Abdomen Labeling Challenge, MICCAI 2015, consists of 30 CT scans covering 8 abdominal organ. The dataset can be downloaded from https://www.synapse.org/#!Synapse:syn3193805/wiki/217789
 
-[LCTSC](https://www.cancerimagingarchive.net/collection/lctsc/)
+LCTSC - Lung CT Segmentation Challenge 2017 contains 60 CT scans of the thoracic region. The dataset can be downloaded from https://www.cancerimagingarchive.net/collection/lctsc/
 
 
 Before running the training or testing scripts, ensure that the datasets (ACDC, Synapse, LCTSC) are downloaded and organized in the following structure (you can adjust this in the code if needed):
@@ -37,6 +38,7 @@ To replicate our experiments, please use:
 - Python 3.10.12
 - PyTorch 2.5.1
 
+## Requirements
 Install all required dependencies using:
 
 ```bash
@@ -66,3 +68,9 @@ python test.py
 [TransUNet](https://github.com/Beckschen/TransUNet)
 
 [Swin-UNet](https://github.com/HuCaoFighting/Swin-Unet)
+
+## References
+[1] O. Bernard, A. Lalande, C. Zotti, F. Cervenansky, et al. "Deep Learning Techniques for Automatic MRI Cardiac Multi-structures Segmentation and Diagnosis: Is the Problem Solved ?" in IEEE Transactions on Medical Imaging, vol. 37, no. 11, pp. 2514-2525, Nov. 2018
+doi: 10.1109/TMI.2018.2837502
+
+[2] inzhong Yang, Greg Sharp, Harini Veeraraghavan, Wouter Van Elmpt, Andre Dekker, T Lustberg, and M Gooding. Data from lung ct segmentation challenge 2017 (lctsc). The Cancer Imaging Archive, 2017
