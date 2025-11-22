@@ -26,12 +26,13 @@ datasets/
 ├── Synapse/
 │ ├── images/
 │ └── labels/
-└── LCTSC/
-├── images/
-└── labels/
-└── Brats2024/
-├── images/
-└── labels/
+├── LCTSC/
+│ ├── images/
+│ └── labels/
+├── Brats2024/
+│ ├── images/
+│ └── labels/
+
 
 </details>
 ```
