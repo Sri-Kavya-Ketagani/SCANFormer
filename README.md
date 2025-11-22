@@ -1,7 +1,7 @@
 # SCANFormer: Scale and Context-Aware Nested Feature Fusion Transformer for Medical Image Segmentation
 
 This repository contains the official implementation of **SCANFormer**, a hybrid CNN-Transformer model designed for accurate and efficient medical image segmentation. SCANFormer is a novel and generalized medical image segmentation framework with a comprehensive
-multi-scale feature extraction and fusion approach to enable more diverse feature learning. Extensive experiments on datasets of CT and MRI modalities demonstrate the superiority of SCANFormer, achieving 3%, 8.48%, and 11.6% higher Dice scores than TransUNet on the ACDC, Synapse, and LCTSC datasets, respectively even when trained from scratch without relying on pre-trained models.
+multi-scale feature extraction and fusion approach to enable more diverse feature learning. Extensive experiments on datasets of CT and MRI modalities demonstrate the superiority of SCANFormer, achieving 3%, 8.48%, 11.6% and 11.06% higher Dice scores than TransUNet on the ACDC, Synapse, LCTSC and Brats-Africa2024 datasets, respectively even when trained from scratch without relying on pre-trained models.
 
 
 ## Datasets
@@ -12,6 +12,9 @@ ACDC - Automated Cardiac Diagnosis Challenge consists of 100 MRI cases for segme
 Synapse -  Multi-Atlas Abdomen Labeling Challenge, MICCAI 2015, consists of 30 CT scans covering 8 abdominal organ. The dataset can be downloaded from https://www.synapse.org/#!Synapse:syn3193805/wiki/217789
 
 LCTSC - Lung CT Segmentation Challenge 2017 contains 60 CT scans of the thoracic region. The dataset can be downloaded from https://www.cancerimagingarchive.net/collection/lctsc/
+
+Brats-Africa2024 - Brain tumor segmentation challenge on African population contains 60 MRI patient cases. The dataset can be downloaded from
+https://www.cancerimagingarchive.net/collection/brats-africa/
 
 
 Before running the training or testing scripts, ensure that the datasets (ACDC, Synapse, LCTSC) are downloaded and organized in the following structure (you can adjust this in the code if needed):
@@ -24,6 +27,9 @@ datasets/
 │ ├── images/
 │ └── labels/
 └── LCTSC/
+├── images/
+└── labels/
+└── Brats2024/
 ├── images/
 └── labels/
 
@@ -99,6 +105,11 @@ Evaluation was conducted on 2D slices using dataset-specific splits following th
   - 12 samples for validation
   - 12 samples for testing
   - **Metrics**: Dice Similarity Coefficient (DSC), 95% Hausdorff Distance (HD95)
+ 
+- **Brats-Africa2024**:
+  - 48 samples for training
+  - 12 samples for testing
+  - **Metrics**: Dice Similarity Coefficient (DSC) only
 
 All models were trained and evaluated under identical conditions per dataset.
 
